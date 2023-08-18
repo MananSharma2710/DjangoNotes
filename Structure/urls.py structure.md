@@ -1,5 +1,8 @@
 ## STRUCTURE of urls.py
 
++ `urls.py` file is used to define url pattern attached with application or view of application or view function of application.
++ `urls.py` file is located inside *inner project folder* not inside *application folder* which means we define url at project level for applications. Defined url name will be used by application user to get response from the application or view function of application.
+
 ```python
 from django.urls import path
 from . import views
