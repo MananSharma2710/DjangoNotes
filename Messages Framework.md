@@ -87,8 +87,18 @@ This will record messages with a level of DEBUG and higher.
 
 Open *settings.py*
 ```python
-from django.contrib import messages import constants as messages
+from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR:'danger'
 }
+```
+
+## get_messages(request)
+
+`get_messages(request)`- This method is used to get message. If we need to get message outside template we can use *get_messages(request)*.
+```python
+from django.contrib.messages import get_messages
+storage = get_messages(request)
+for message in storage:
+    #do anything with message
 ```
